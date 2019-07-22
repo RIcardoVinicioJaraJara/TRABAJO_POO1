@@ -25,7 +25,7 @@ public class TRABAJO_POO {
         //Instanciamos las clases de producto y mansanas
         System.out.println("Creamos producto manzanas");
         Producto manzanas = new Producto(cant, pre);
-        
+
         System.out.println("Ingrese la cantidad manzanas");
         cant = e.nextInt();
         System.out.println("Ingrese el precio de las manzanas");
@@ -33,39 +33,40 @@ public class TRABAJO_POO {
         System.out.println("Cremos producto peraz");
         Producto peraz = new Producto(cant, pre);
 
-        //Obtenenmos nuestro valores de compra >> Como no se  a vendido ni comprado daria igual a cero
-        System.out.println("El valor entre compra y vente de manzanas y peraz es: "+ manzanas.getTotalVentas());
-        
-        System.out.println("");
-        //Vendemos unos productos
-        
-        manzanas.vender(40);
-        peraz.vender(25);
-        
-        //Obtenemos nuestro valor en ventas
-        System.out.println("El valor entre compra y vente de manzanas y peraz es: "+ peraz.getTotalVentas());
-        
-        System.out.println("");
-        //Comproamos algunos productos
-        manzanas.comprar(10);
-        peraz.comprar(10);
-        
-        //Obteneos nuestro valor en compras y ventas;
-        System.out.println("El valor entre compra y vente de manzanas y peraz es: "+ manzanas.getTotalVentas());
-        
-        System.out.println("");
-        //Intentamos vender un valor que no existe
-        manzanas.vender(200);
-        peraz.vender(150);
-        System.out.println("");
-        //Compramos un valor existente
-        manzanas.vender(20);
-        peraz.vender(15);
-        
-        //Obteneos nuestro valor entre compras y ventas;
-        System.out.println("El valor vendio de manzanas y parez es: "+peraz.getTotalVentas());
-        
-       
+        int opc = 0;
+        do {
+            System.out.println("Eliga opcion \n 1 >> Comprar manzanas \n 2 >> Vender manzanas \n 3 >> Comprar peraz  \n 4 >> Veneder peraz \n 5 >>  Total Ventas \n 6 >> Salir");
+            opc = e.nextInt();
+            switch (opc) {
+                case 1:
+                    System.out.println("Ingrese cantidad a comprar");
+                    manzanas.comprar(e.nextInt());
+                    break;
+                case 2:
+                    System.out.println("Ingrese cantidad a vender");
+                    manzanas.vender(e.nextInt());
+                    break;
+                case 3:
+                    System.out.println("Ingrese cantidad a comprar");
+                    peraz.comprar(e.nextInt());
+                    break;
+                case 4:
+                    System.out.println("Ingrese cantidad a vender");
+                    peraz.vender(e.nextInt());
+                    break;
+                case 5:
+                    System.out.println("El valor entre compra y vente de manzanas y peraz es: " + manzanas.getTotalVentas());
+                    break;
+                case 6:
+                    opc = 6;
+                    break;
+                default:
+                    System.out.println("El numero es icorrecto");
+                    break;
+            }
+
+        } while (opc != 6);
+
     }
-    
+
 }
