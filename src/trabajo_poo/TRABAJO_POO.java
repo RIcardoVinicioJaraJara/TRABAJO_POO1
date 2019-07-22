@@ -5,6 +5,8 @@
  */
 package trabajo_poo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author vinic
@@ -15,17 +17,28 @@ public class TRABAJO_POO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad manzanas");
+        int cant = e.nextInt();
+        System.out.println("Ingrese el precio de las manzanas");
+        int pre = e.nextInt();
         //Instanciamos las clases de producto y mansanas
         System.out.println("Creamos producto manzanas");
-        Producto manzanas = new Producto(100, 2);
+        Producto manzanas = new Producto(cant, pre);
+        
+        System.out.println("Ingrese la cantidad manzanas");
+        cant = e.nextInt();
+        System.out.println("Ingrese el precio de las manzanas");
+        pre = e.nextInt();
         System.out.println("Cremos producto peraz");
-        Producto peraz = new Producto(50, 2);
+        Producto peraz = new Producto(cant, pre);
 
         //Obtenenmos nuestro valores de compra >> Como no se  a vendido ni comprado daria igual a cero
         System.out.println("El valor entre compra y vente de manzanas y peraz es: "+ manzanas.getTotalVentas());
         
         System.out.println("");
         //Vendemos unos productos
+        
         manzanas.vender(40);
         peraz.vender(25);
         
