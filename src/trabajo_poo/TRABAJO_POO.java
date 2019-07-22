@@ -26,9 +26,9 @@ public class TRABAJO_POO {
         System.out.println("Creamos producto manzanas");
         Producto manzanas = new Producto(cant, pre);
 
-        System.out.println("Ingrese la cantidad manzanas");
+        System.out.println("Ingrese la cantidad peraz");
         cant = e.nextInt();
-        System.out.println("Ingrese el precio de las manzanas");
+        System.out.println("Ingrese el precio de las peraz");
         pre = e.nextInt();
         System.out.println("Cremos producto peraz");
         Producto peraz = new Producto(cant, pre);
