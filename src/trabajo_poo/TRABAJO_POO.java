@@ -55,7 +55,7 @@ public class TRABAJO_POO {
                     peraz.vender(e.nextInt());
                     break;
                 case 5:
-                    System.out.println("El valor entre compra y vente de manzanas y peraz es: " + manzanas.getTotalVentas());
+                    System.out.println("El valor entre compra y venta de manzanas y peraz es: " + manzanas.getTotalVentas());
                     break;
                 case 6:
                     opc = 6;
